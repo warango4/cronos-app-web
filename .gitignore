@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Dependencias (si en el futuro se agrega tooling)
+node_modules/
+
+# Variables de entorno
+.env
