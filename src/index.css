@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Nunito', 'Figtree', ui-sans-serif, system-ui, sans-serif;
+
+  --color-canvas: #fffefd;
+  --color-sidebar: #f7f5f0;
+  --color-head: #faf3eb;
+  --color-cream: #fdf8f0;
+  --color-line: #e9e0d6;
+  --color-line-soft: #e0dcd5;
+  --color-ink: #6b5e59;
+  --color-ink-strong: #332a26;
+  --color-muted: #666666;
+  --color-on-variant: #49454f;
+  --color-outline-variant: #cac4d0;
+
+  --color-peach: #efa782;
+  --color-peach-tint: #fdf1ec;
+  --color-sage: #8fab82;
+  --color-sage-tint: #f0f5ee;
+
+  --color-ok: #4a6e3f;
+  --color-ok-bg: #e3ece0;
+  --color-warn: #a3702c;
+  --color-warn-bg: #fbf1df;
+  --color-err: #b55a3c;
+  --color-err-bg: #f9e4dd;
+}
+
+@layer base {
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+  }
+  /* Tailwind 4 deja el cursor por defecto en botones. */
+  button:not(:disabled),
+  select,
+  label:has(> input[type='checkbox']) {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-sage);
+    outline-offset: 2px;
+  }
+}
